@@ -1,40 +1,35 @@
-To create the README.md file in the root of your project, follow these steps:
-
-1. Open your terminal.
-2. Navigate to the root directory of your project.
-3. Create the README.md file using the following command:
-
-```sh
-echo "# reactjs-file-viewer
+# ReactJS File Viewer
 
 A powerful and flexible ReactJS component for viewing various file types. Easily integrate file viewing capabilities into your React applications.
 
 ## Features
 
-- Supports multiple file types including PDF, DOCX, JPG, PNG, HEIC, and more.
+- Supports multiple file types, including **PDF, DOCX, JPG, PNG, HEIC, MP4, MP3, and more**.
 - Easy to use and integrate into existing React projects.
-- Lightweight and performant.
-- Customizable and extensible.
+- Lightweight, efficient, and performant.
+- Customizable UI with flexible styling options.
+- Supports local and remote file URLs.
+- Error handling and fallback UI support.
 
 ## Installation
 
-Install the package using npm:
+You can install the package using **npm**:
 
-\`\`\`sh
+```sh
 npm install reactjs-file-viewer
-\`\`\`
+```
 
-Or using yarn:
+Or using **yarn**:
 
-\`\`\`sh
+```sh
 yarn add reactjs-file-viewer
-\`\`\`
+```
 
 ## Usage
 
-Here is an example of how to use the \`reactjs-file-viewer\` package in your ReactJS project:
+Here is an example of how to use the `reactjs-file-viewer` package in your ReactJS project:
 
-\`\`\`jsx
+```jsx
 import React from 'react';
 import FileViewer from 'reactjs-file-viewer';
 
@@ -51,45 +46,52 @@ const App = () => {
 };
 
 export default App;
-\`\`\`
+```
 
 ## Props
 
-- \`file\` (string): The path to the file you want to view.
-- \`fileType\` (string): The type of the file (e.g., 'pdf', 'docx', 'jpg').
+| Prop      | Type   | Description                                                | Required |
+|-----------|--------|------------------------------------------------------------|----------|
+| `file`    | string | The path or URL of the file to be viewed.                  | Yes      |
+| `fileType`| string | The file type (e.g., 'pdf', 'docx', 'jpg', 'mp4', etc.).   | Yes      |
+| `style`   | object | Custom styles for the viewer component.                    | No       |
+| `onError` | func   | Callback function for handling errors.                     | No       |
+| `onLoad`  | func   | Callback function triggered when the file loads successfully. | No       |
 
 ## Supported File Types
 
-- PDF
-- DOCX
-- JPG
-- PNG
-- HEIC
-- And more...
+- **Documents**: PDF, DOCX, TXT, MD
+- **Images**: JPG, PNG, GIF, HEIC, SVG
+- **Videos**: MP4, WebM, AVI
+- **Audio**: MP3, WAV
+
+And more...
 
 ## Customization
 
 You can customize the file viewer by passing additional props and styles. For example:
 
-\`\`\`jsx
+```jsx
 <FileViewer
   file={file}
   fileType={fileType}
-  style={{ width: '100%', height: '500px' }}
+  style={{ width: '100%', height: '500px', border: '1px solid #ccc' }}
+  onError={() => console.error('Failed to load file')}
+  onLoad={() => console.log('File loaded successfully')}
 />
-\`\`\`
+```
 
 ## Contributing
 
-We welcome contributions to improve this package. If you have any suggestions or find any issues, please open an issue or submit a pull request on GitHub.
+We welcome contributions to improve this package! If you have suggestions, find a bug, or want to add a new feature, feel free to open an issue or submit a pull request on **GitHub**.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 
-Your Name - [your-email@example.com](mailto:your-email@example.com)
+[Your Name](mailto:your-email@example.com)
 
 ## Keywords
 
@@ -99,17 +101,18 @@ Your Name - [your-email@example.com](mailto:your-email@example.com)
 - PDF Viewer
 - DOCX Viewer
 - Image Viewer
+- Video Viewer
 - File Display
 - React Component
 - File Handling
 
 ## Acknowledgements
 
-Special thanks to all the contributors and the open-source community for their support.
+Special thanks to all contributors and the open-source community for their support.
 
 ## Support
 
-If you have any questions or need support, feel free to contact the author at [your-email@example.com](mailto:your-email@example.com).
+If you need assistance, feel free to contact the author at [your-email@example.com](mailto:your-email@example.com).
 
 ## Changelog
 
@@ -117,13 +120,7 @@ If you have any questions or need support, feel free to contact the author at [y
 
 - Initial release with support for multiple file types.
 
-## Related Projects
-
-- [react-pdf-viewer](https://github.com/your-username/react-pdf-viewer)
-- [react-image-viewer](https://github.com/your-username/react-image-viewer)
-
 ## Links
 
-- [GitHub Repository](https://github.com/your-username/reactjs-file-viewer)
-- [NPM Package](https://www.npmjs.com/package/reactjs-file-viewer)" > README.md
-```
+- [GitHub Repository](https://github.com/AkshayKhandarkar/reactjs-file-viewer/tree/main)
+- [NPM Package](https://www.npmjs.com/package/reactjs-file-viewer)
