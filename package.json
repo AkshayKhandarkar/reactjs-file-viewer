@@ -1,0 +1,56 @@
+{
+  "name": "reactjs-file-viewer",
+  "version": "1.0.1",
+  "description": "A React component to view and download files from base64 strings.",
+  "main": "dist/reactjs-file-viewer.cjs.js",
+  "module": "dist/reactjs-file-viewer.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "file-saver": "^2.0.5",
+    "heic2any": "^0.0.4",
+    "js-base64": "^3.7.7",
+    "mime-types": "^2.1.35",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/file-saver": "^2.0.7",
+    "@types/mime-types": "^2.1.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "rollup": "^4.36.0",
+    "typescript": "^5.8.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "file-viewer",
+    "base64",
+    "document-viewer",
+    "reactjs-file-viewer",
+    "pdf",
+    "image",
+    "heic",
+    "heif"
+  ],
+  "author": "akshaykhandarkar",
+  "license": "MIT"
+}
